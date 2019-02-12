@@ -1,0 +1,1 @@
+# wyrimaps-battlenet-api-client
