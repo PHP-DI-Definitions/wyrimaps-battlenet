@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "d3a86c84f60856d0b1d0eddba6f5fe91",
@@ -3056,12 +3056,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriMaps/php-battlenet-client.git",
-                "reference": "8de0e681bb7cdb8b54fbe1cd7ef47e3073d6ef14"
+                "reference": "7a069c467a20968a9fa7caad396effc743beb8b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriMaps/php-battlenet-client/zipball/8de0e681bb7cdb8b54fbe1cd7ef47e3073d6ef14",
-                "reference": "8de0e681bb7cdb8b54fbe1cd7ef47e3073d6ef14",
+                "url": "https://api.github.com/repos/WyriMaps/php-battlenet-client/zipball/7a069c467a20968a9fa7caad396effc743beb8b9",
+                "reference": "7a069c467a20968a9fa7caad396effc743beb8b9",
                 "shasum": ""
             },
             "require": {
@@ -3103,7 +3103,7 @@
                 }
             ],
             "description": "Battle.net API Client",
-            "time": "2019-02-14T17:59:52+00:00"
+            "time": "2019-02-14T21:36:04+00:00"
         },
         {
             "name": "zendframework/zend-hydrator",
