@@ -298,6 +298,94 @@
             "time": "2017-06-28T19:24:19+00:00"
         },
         {
+            "name": "api-clients/middleware-bearer-authorization",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-api-clients/middleware-bearer-authorization.git",
+                "reference": "92054999e4dc31aa0729539404f0105d5728a0e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-api-clients/middleware-bearer-authorization/zipball/92054999e4dc31aa0729539404f0105d5728a0e4",
+                "reference": "92054999e4dc31aa0729539404f0105d5728a0e4",
+                "shasum": ""
+            },
+            "require": {
+                "api-clients/middleware": "^4.0",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "api-clients/test-utilities": "^3.0.1",
+                "ringcentral/psr7": "^1.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ApiClients\\Middleware\\BearerAuthorization\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "ceesjank@gmail.com"
+                },
+                {
+                    "name": "Mateusz Drost",
+                    "email": "mat.drost@gmail.com"
+                }
+            ],
+            "description": "Bearer authorization middleware",
+            "homepage": "https://php-api-clients.org/clients/travis/",
+            "time": "2017-07-02T14:15:22+00:00"
+        },
+        {
+            "name": "api-clients/middleware-http-exceptions",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-api-clients/middleware-http-exceptions.git",
+                "reference": "b6e2218ef9beaecc4c76909e586ac5e892764e3c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-api-clients/middleware-http-exceptions/zipball/b6e2218ef9beaecc4c76909e586ac5e892764e3c",
+                "reference": "b6e2218ef9beaecc4c76909e586ac5e892764e3c",
+                "shasum": ""
+            },
+            "require": {
+                "api-clients/middleware": "^4.0",
+                "api-clients/psr7-http-status-exceptions": "^1.0",
+                "clue/buzz-react": "^2.0 || ^1.1",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "api-clients/test-utilities": "^3.0.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ApiClients\\Middleware\\HttpExceptions\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "ceesjank@gmail.com"
+                }
+            ],
+            "description": "Wrap failing HTTP requests in HTTP response type specific exceptions",
+            "time": "2018-07-08T12:59:42+00:00"
+        },
+        {
             "name": "api-clients/middleware-json",
             "version": "3.1.0",
             "source": {
@@ -385,6 +473,47 @@
             ],
             "description": "User Agent header middleware",
             "time": "2017-07-04T15:38:31+00:00"
+        },
+        {
+            "name": "api-clients/psr7-http-status-exceptions",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-api-clients/psr7-http-status-exceptions.git",
+                "reference": "843b2a3240c01a35f12863f954ab4f9590f1738e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-api-clients/psr7-http-status-exceptions/zipball/843b2a3240c01a35f12863f954ab4f9590f1738e",
+                "reference": "843b2a3240c01a35f12863f954ab4f9590f1738e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0",
+                "psr/http-message": "^1.0"
+            },
+            "require-dev": {
+                "api-clients/test-utilities": "^3.0.1",
+                "ringcentral/psr7": "^1.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ApiClients\\Tools\\Psr7\\HttpStatusExceptions\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "ceesjank@gmail.com"
+                }
+            ],
+            "description": "PSR-7 Response wrapping exceptions",
+            "time": "2017-03-08T06:57:57+00:00"
         },
         {
             "name": "api-clients/resource",
@@ -2927,20 +3056,23 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriMaps/php-battlenet-client.git",
-                "reference": "7049cdf61c3678e2df0dd7f724bb13112f08587a"
+                "reference": "8de0e681bb7cdb8b54fbe1cd7ef47e3073d6ef14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriMaps/php-battlenet-client/zipball/7049cdf61c3678e2df0dd7f724bb13112f08587a",
-                "reference": "7049cdf61c3678e2df0dd7f724bb13112f08587a",
+                "url": "https://api.github.com/repos/WyriMaps/php-battlenet-client/zipball/8de0e681bb7cdb8b54fbe1cd7ef47e3073d6ef14",
+                "reference": "8de0e681bb7cdb8b54fbe1cd7ef47e3073d6ef14",
                 "shasum": ""
             },
             "require": {
                 "api-clients/client-services": "^1.4",
                 "api-clients/foundation": "^1.0",
+                "api-clients/middleware-bearer-authorization": "^2.0",
+                "api-clients/middleware-http-exceptions": "^2.0",
                 "api-clients/middleware-json": "^3.1",
                 "api-clients/middleware-user-agent": "^2.0",
-                "php": "^7.2"
+                "php": "^7.2",
+                "react/cache": "^0.5.0"
             },
             "require-dev": {
                 "api-clients/resource-generator": "^1.0",
@@ -2971,7 +3103,7 @@
                 }
             ],
             "description": "Battle.net API Client",
-            "time": "2019-02-01T22:20:58+00:00"
+            "time": "2019-02-14T17:59:52+00:00"
         },
         {
             "name": "zendframework/zend-hydrator",
