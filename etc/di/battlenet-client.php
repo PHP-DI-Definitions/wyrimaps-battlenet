@@ -2,6 +2,7 @@
 
 use ApiClients\Foundation\Options as FoundationOptions;
 use ApiClients\Foundation\Transport\Options as TransportOptions;
+use React\Cache\CacheInterface;
 use React\EventLoop\LoopInterface;
 use WyriMaps\BattleNet\AsyncClient;
 use WyriMaps\BattleNet\AsyncClientInterface;
@@ -12,7 +13,13 @@ use function DI\factory;
 use function DI\get;
 
 return [
-    AsyncClientInterface::class => factory(function (string $authKey, string $authSecret, string $cacheKey, LoopInterface $loop) {
+    AsyncClientInterface::class => factory(function (
+        string $authKey,
+        string $authSecret,
+        CacheInterface $cacheDriver,
+        string $cacheKey,
+        LoopInterface $loop
+    ) {
         return AsyncClient::create(
             $loop,
             new ClientCredentials(
@@ -26,6 +33,7 @@ return [
                     ],
                     TransportOptions::DEFAULT_REQUEST_OPTIONS => [
                         ClientCredentialsMiddleware::class => [
+                            Options::API_TOKEN_CACHE => $cacheDriver,
                             Options::API_TOKEN_CACHE_KEY => $cacheKey,
                         ],
                     ],
@@ -35,5 +43,6 @@ return [
     })
         ->parameter('authKey', get('config.wyrimaps.battlenet.auth.key'))
         ->parameter('authSecret', get('config.wyrimaps.battlenet.auth.secret'))
+        ->parameter('cacheDriver', get('config.wyrimaps.battlenet.cache.driver'))
         ->parameter('cacheKey', get('config.wyrimaps.battlenet.cache.key')),
 ];
