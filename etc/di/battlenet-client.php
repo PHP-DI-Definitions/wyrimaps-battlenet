@@ -17,7 +17,6 @@ return [
     WorldOfWarcraftAsyncClientInterface::class => factory(function (AsyncClientInterface $asyncClient) {
         return $asyncClient->worldOfWarcraft();
     }),
-    AsyncClientInterface::class => factory(function (string $authKey, string $authSecret, string $cacheKey, LoopInterface $loop) {
     AsyncClientInterface::class => factory(function (
         string $authKey,
         string $authSecret,
