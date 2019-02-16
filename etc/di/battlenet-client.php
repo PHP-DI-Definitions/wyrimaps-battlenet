@@ -6,6 +6,7 @@ use React\Cache\CacheInterface;
 use React\EventLoop\LoopInterface;
 use WyriMaps\BattleNet\AsyncClient;
 use WyriMaps\BattleNet\AsyncClientInterface;
+use WyriMaps\BattleNet\WorldOfWarcraft\AsyncClientInterface as WorldOfWarcraftAsyncClientInterface;
 use WyriMaps\BattleNet\Authentication\ClientCredentials;
 use WyriMaps\BattleNet\Middleware\ClientCredentialsMiddleware;
 use WyriMaps\BattleNet\Options;
@@ -13,6 +14,10 @@ use function DI\factory;
 use function DI\get;
 
 return [
+    WorldOfWarcraftAsyncClientInterface::class => factory(function (AsyncClientInterface $asyncClient) {
+        return $asyncClient->worldOfWarcraft();
+    }),
+    AsyncClientInterface::class => factory(function (string $authKey, string $authSecret, string $cacheKey, LoopInterface $loop) {
     AsyncClientInterface::class => factory(function (
         string $authKey,
         string $authSecret,
