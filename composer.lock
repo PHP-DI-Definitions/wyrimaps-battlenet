@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d3a86c84f60856d0b1d0eddba6f5fe91",
+    "content-hash": "1dfd252dcb31d93f5f0170d05f7ba523",
     "packages": [
         {
             "name": "api-clients/client-services",
@@ -383,6 +383,10 @@
                 }
             ],
             "description": "Wrap failing HTTP requests in HTTP response type specific exceptions",
+            "support": {
+                "issues": "https://github.com/php-api-clients/middleware-http-exceptions/issues",
+                "source": "https://github.com/php-api-clients/middleware-http-exceptions/tree/master"
+            },
             "time": "2018-07-08T12:59:42+00:00"
         },
         {
@@ -3229,5 +3233,6 @@
     "platform-dev": [],
     "platform-overrides": {
         "php": "7.2"
-    }
+    },
+    "plugin-api-version": "2.0.0"
 }

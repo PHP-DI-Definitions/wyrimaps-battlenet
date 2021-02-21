@@ -2,6 +2,7 @@
 
 use ApiClients\Foundation\Options as FoundationOptions;
 use ApiClients\Foundation\Transport\Options as TransportOptions;
+use ApiClients\Middleware\HttpExceptions\HttpExceptionsMiddleware;
 use React\Cache\CacheInterface;
 use React\EventLoop\LoopInterface;
 use WyriMaps\BattleNet\AsyncClient;
@@ -34,6 +35,7 @@ return [
                 FoundationOptions::TRANSPORT_OPTIONS => [
                     TransportOptions::MIDDLEWARE => [
                         ClientCredentialsMiddleware::class,
+                        HttpExceptionsMiddleware::class,
                     ],
                     TransportOptions::DEFAULT_REQUEST_OPTIONS => [
                         ClientCredentialsMiddleware::class => [
